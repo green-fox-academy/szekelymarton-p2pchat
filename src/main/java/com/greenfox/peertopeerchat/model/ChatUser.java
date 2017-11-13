@@ -17,6 +17,9 @@ public class ChatUser {
   public ChatUser() {
 
   }
+  public ChatUser(String name) {
+    this.name = name;
+  }
 
   public long getId() {
     return id;
