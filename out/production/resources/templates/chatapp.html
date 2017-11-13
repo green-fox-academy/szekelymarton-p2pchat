@@ -6,5 +6,12 @@
 </head>
 <body>
 <h1>Peer to Peer Chat program</h1>
+<table>
+  <th:block th:each="user : ${listUsers}">
+    <tr>
+      <td th:text="${chatuser.getName()}">...</td>
+    </tr>
+  </th:block>
+</table>
 </body>
 </html>

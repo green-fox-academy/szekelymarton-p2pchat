@@ -6,16 +6,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class ChatMessage {
+public class ChatUser {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
 
-  private String message;
+  private String name;
 
-  public ChatMessage(String message) {
-    this.message = message;
+  public ChatUser() {
+
   }
 
   public long getId() {
@@ -26,11 +26,11 @@ public class ChatMessage {
     this.id = id;
   }
 
-  public String getMessage() {
-    return message;
+  public String getName() {
+    return name;
   }
 
-  public void setMessage(String message) {
-    this.message = message;
+  public void setName(String name) {
+    this.name = name;
   }
 }
