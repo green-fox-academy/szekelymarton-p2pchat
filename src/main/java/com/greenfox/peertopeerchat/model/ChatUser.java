@@ -10,13 +10,13 @@ public class ChatUser {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private long id;
+  long id;
 
-  private String name;
+  public String name;
 
   public ChatUser() {
-
   }
+
   public ChatUser(String name) {
     this.name = name;
   }

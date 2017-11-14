@@ -10,12 +10,21 @@ public class ChatMessage {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private long id;
+   long id;
 
-  private String message;
+   public String message;
+   public String messageBy;
 
-  public ChatMessage(String message) {
+  public ChatMessage() {
+  }
+
+  public ChatMessage(String message,String messageBy) {
     this.message = message;
+    this.messageBy = messageBy;
+  }
+
+  public String getMessageBy() {
+    return messageBy;
   }
 
   public long getId() {
@@ -32,5 +41,8 @@ public class ChatMessage {
 
   public void setMessage(String message) {
     this.message = message;
+  }
+
+  public void setMessageBy(String messageBy) {
   }
 }
