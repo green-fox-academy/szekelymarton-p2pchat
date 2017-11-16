@@ -6,6 +6,11 @@
 </head>
 <body>
 <h1>Peer to Peer Chat program</h1>
+<div th:if="${users == null}">
+  <h2><a th:href="@{/enter}">Register</a></h2>
+</div>
+
+<div th:if="${users != null}">
   <table>
     <thead>
     <tr>
@@ -29,5 +34,6 @@
     <td th:text="${chatmessage.messageBy}">...</td>
   </tr>
 </th:block>
+</div>
 </body>
 </html>
