@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Enter</title>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8"/>
+  <title>Enter user</title>
 </head>
 <body>
-<h1>Enter Username</h1>
-<form th:action="@{/enteruser}" th:object="${newuser}" method="post">
-  <label>Type in your username: </label>
-  <input type="text" th:field="*{name}"/>
-  <button type="submit">Submit</button>
+
+<h1>Enter</h1>
+<form th:action="@{/save}" method="post" th:object="${chatuser}">
+  <input type="text" value="title" th:field="*{name}" placeholder=" Name of User"/>
+  <button type="submit">Enter</button>
+  <span th:if="${error}" th:text="${error}"/>
+  <span th:if="${errorTwo}" th:text="${errorTwo}"/>
 </form>
 </body>
 </html>

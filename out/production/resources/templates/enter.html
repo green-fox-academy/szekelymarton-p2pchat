@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8"/>
-  <title>P2P Chat</title>
+  <title>Enter user</title>
 </head>
 <body>
-<h1>Register</h1>
-<p>Choose your name:</p>
-<span>
-    <form method="post" action="/enter">
-      <input th:type="text" name="name"/>
-      <input th:type="submit" value="Enter"/>
-    </form>
-  </span>
+
+<h1>Enter</h1>
+<form th:action="@{/save}" method="post" th:object="${chatuser}">
+  <input type="text" value="title" th:field="*{name}" placeholder=" Name of User"/>
+  <button type="submit">Enter</button>
+  <span th:if="${error}" th:text="${error}"/>
+  <span th:if="${errorTwo}" th:text="${errorTwo}"/>
+</form>
 </body>
 </html>
